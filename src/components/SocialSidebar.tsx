@@ -42,7 +42,7 @@ const SocialSidebar = () => {
         <div className="flex flex-col items-center">
           <a 
             href="mailto:sudeepbanerjeechopra@hotmail.com" 
-            className="vertical-text text-tech-light-slate hover:text-tech-cyan tracking-widest text-xs font-mono transform hover:-translate-y-1 transition-all"
+            className="vertical-email text-tech-light-slate hover:text-tech-cyan tracking-widest text-xs font-mono transform hover:-translate-y-1 transition-all"
           >
             sudeepbanerjeechopra@hotmail.com
           </a>
@@ -50,12 +50,15 @@ const SocialSidebar = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        .vertical-text {
-          writing-mode: vertical-rl;
-          letter-spacing: 0.1em;
-        }
-      `}</style>
+      {/* Adding the CSS directly in the document with proper React syntax */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .vertical-email {
+            writing-mode: vertical-rl;
+            letter-spacing: 0.1em;
+          }
+        `
+      }} />
     </>
   );
 };
