@@ -11,7 +11,7 @@ const Footer = () => {
           </div>
           
           <div className="text-tech-light-slate text-sm">
-            <span>Designed & Built with ❤️</span>
+            <span>"Leadership is the capacity to translate vision into reality" - Warren Bennis</span>
           </div>
         </div>
       </div>

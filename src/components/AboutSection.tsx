@@ -11,7 +11,7 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-start">
           <div className="md:col-span-2 space-y-4">
             <p className="text-lg">
-              Hello! I'm Sudeep, an undergraduate student pursuing B.Tech in Computer Science Engineering with a focus on Artificial Intelligence, Machine Learning, Networking, and Cybersecurity.
+              Hello! I'm Sudeep, an undergraduate student pursuing B.Tech in Computer Science Engineering with a focus on Artificial Intelligence, Machine Learning, Networking, and Cybersecurity. I'm passionate about <span className="text-tech-cyan">leadership</span> and driving technological innovation.
             </p>
             
             <p>
@@ -19,15 +19,15 @@ const AboutSection = () => {
             </p>
             
             <p>
-              I've had the privilege of working at <span className="text-tech-lightest-slate">Defence Research Development Laboratory (DRDO)</span> as a Project Intern, where I applied machine learning techniques for detecting aerial vehicles. I'm also working as an IT Consultant at <span className="text-tech-lightest-slate">Paragon Power Systems</span>, managing technical infrastructure and handling HR responsibilities.
+              Currently, I'm working as an <span className="text-tech-lightest-slate">Associate Network Engineer at Instaresz Business Services</span> where I set up Sophos firewalls, manage switches and VLANs, implement security rules, and handle DNS management for multiple domains. I've also had the privilege of working at <span className="text-tech-lightest-slate">Defence Research Development Laboratory (DRDO)</span> as a Project Intern, where I applied machine learning techniques for detecting aerial vehicles.
             </p>
             
             <p>
-              My research has led me to interesting projects like securing classified documents using blockchain, creating an offline medical chatbot using GPT-4 and Llama CPP, and developing systems for drone detection using computer vision.
+              My technical expertise combined with leadership skills has enabled me to drive projects forward and inspire teams to achieve their goals. I believe in leading by example and creating an environment where innovation thrives.
             </p>
             
             <p>
-              Beyond technical work, I hold leadership positions at my college, including Executive Board Member of the Student Affairs Cell and Secretary of the IEEE Vardhaman Student Branch.
+              Beyond technical work, I hold leadership positions at my college, including Executive Board Member of the Student Affairs Cell and Secretary of the IEEE Vardhaman Student Branch. These roles have honed my abilities to lead teams, organize events, and drive initiatives that make a positive impact.
             </p>
           </div>
           
@@ -46,8 +46,12 @@ const AboutSection = () => {
             
             <Card className="tech-card">
               <div>
-                <h3 className="text-tech-cyan text-xl font-medium mb-2">Achievements</h3>
+                <h3 className="text-tech-cyan text-xl font-medium mb-2">Leadership & Achievements</h3>
                 <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="text-tech-cyan mr-2">▹</span>
+                    <span>Led network infrastructure projects at Instaresz Business Services</span>
+                  </li>
                   <li className="flex items-start">
                     <span className="text-tech-cyan mr-2">▹</span>
                     <span>Finalist for the Smart India Hackathon 2022 Grand Finale</span>

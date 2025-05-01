@@ -5,6 +5,19 @@ import { Card } from '@/components/ui/card';
 
 const experiences = [
   {
+    id: 'instaresz',
+    company: 'Instaresz Business Services Private Limited',
+    position: 'Associate Network Engineer',
+    period: 'Present',
+    location: 'Hyderabad, India',
+    responsibilities: [
+      'Set up and configured Sophos firewalls, managed switches and VLANs for enterprise network security.',
+      'Implemented extensive security rules and performed DNS management for 4 domains.',
+      'Deployed and maintained critical applications including SMTP servers and analytics dashboards.',
+      'Led network infrastructure projects, demonstrating technical leadership and project management skills.'
+    ]
+  },
+  {
     id: 'drdo',
     company: 'Defence Research Development Laboratory (DRDO)',
     position: 'Project Intern',
@@ -66,15 +79,17 @@ const experiences = [
 ];
 
 const ExperienceSection = () => {
-  const [activeTab, setActiveTab] = useState('drdo');
+  const [activeTab, setActiveTab] = useState('instaresz');
 
   return (
     <section id="experience" className="py-20 md:py-32 bg-tech-light-blue/20">
       <div className="container mx-auto px-6 md:px-12">
-        <h2 className="section-heading before:content-['02.']">Where I've Worked</h2>
+        <h2 className="section-heading before:content-['02.'] relative">
+          <span className="highlight-heading">Where I've Led & Worked</span>
+        </h2>
         
         <div className="mt-8 md:mt-12">
-          <Tabs defaultValue="drdo" className="max-w-4xl mx-auto" onValueChange={setActiveTab}>
+          <Tabs defaultValue="instaresz" className="max-w-4xl mx-auto" onValueChange={setActiveTab}>
             <div className="overflow-x-auto pb-4">
               <TabsList className="bg-tech-lightest-blue/20 h-auto p-1">
                 {experiences.map(exp => (
@@ -122,7 +137,7 @@ const ExperienceSection = () => {
         </div>
         
         <div className="mt-16 max-w-4xl mx-auto">
-          <h3 className="text-xl font-medium text-tech-lightest-slate mb-6">Academic Positions</h3>
+          <h3 className="text-xl font-medium text-tech-lightest-slate mb-6 highlight-heading">Leadership Positions</h3>
           
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="tech-card">
