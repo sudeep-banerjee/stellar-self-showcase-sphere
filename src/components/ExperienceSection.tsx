@@ -39,18 +39,17 @@ const experiences = [
       'Efficiently handle HR responsibilities, including recruitment, employee relations, and compliance, fostering a positive workplace culture.',
       'Successfully liaise with clients to understand their needs, align services accordingly, and deliver exceptional results, enhancing overall client satisfaction.'
     ]
-  },
+  }
+];
+
+const leadershipPositions = [
   {
     id: 'ieee',
     company: 'IEEE Vardhaman Student Branch',
     position: 'Secretary',
     period: 'January 2024 - December 2024',
     location: 'Hyderabad, India',
-    responsibilities: [
-      'Lead and coordinate IEEE student branch activities, promoting technical knowledge and professional development.',
-      'Organize workshops, seminars, and technical events to enhance student learning and engagement.',
-      'Represent the student branch in meetings with IEEE section and regional bodies.'
-    ]
+    description: 'Leading and coordinating IEEE student branch activities, promoting technical knowledge and professional development among students.'
   },
   {
     id: 'tedx',
@@ -58,11 +57,7 @@ const experiences = [
     position: 'Executive Producer',
     period: 'March 2024 - Present',
     location: 'Hyderabad, India',
-    responsibilities: [
-      'Oversee the planning, organization, and execution of TEDx events at Vardhaman College of Engineering.',
-      'Collaborate with speakers, sponsors, and team members to create impactful and inspiring events.',
-      'Ensure high-quality production standards for talks and event management.'
-    ]
+    description: 'Overseeing the planning, organization, and execution of TEDx events at Vardhaman College of Engineering.'
   },
   {
     id: 'innovation',
@@ -70,11 +65,23 @@ const experiences = [
     position: 'Innovation Coordinator',
     period: 'August 2023 - January 2024',
     location: 'Hyderabad, India',
-    responsibilities: [
-      'Facilitate innovation and entrepreneurship initiatives within the college community.',
-      'Connect students with mentors, resources, and platforms to develop their innovative ideas.',
-      'Organize ideation workshops and competitions to foster a culture of innovation.'
-    ]
+    description: 'Facilitating innovation and entrepreneurship initiatives within the college community.'
+  },
+  {
+    id: 'sac',
+    company: 'Student Affairs Cell, Vardhaman College of Engineering',
+    position: 'Executive Board Member',
+    period: 'August 2022 - Present',
+    location: 'Hyderabad, India',
+    description: 'Collaborating with faculty and students to enhance campus activities and student welfare.'
+  },
+  {
+    id: 'ieee_hyd',
+    company: 'IEEE Hyderabad Section',
+    position: 'Joint Section Student Representative',
+    period: 'February 2024 - November 2024',
+    location: 'Hyderabad, India',
+    description: 'Representing student interests at the sectional level and coordinating inter-college activities.'
   }
 ];
 
@@ -139,20 +146,26 @@ const ExperienceSection = () => {
         <div className="mt-16 max-w-4xl mx-auto">
           <h3 className="text-xl font-medium text-tech-lightest-slate mb-6 highlight-heading">Leadership Positions</h3>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="tech-card">
-              <h4 className="text-tech-cyan font-medium mb-2">Executive Board Member</h4>
-              <p className="text-tech-lightest-slate">Student Affairs Cell, Vardhaman College of Engineering</p>
-              <p>August 2022 - Present</p>
-              <p className="mt-3 text-sm">Collaborating with faculty and students to enhance campus activities and student welfare.</p>
-            </Card>
-            
-            <Card className="tech-card">
-              <h4 className="text-tech-cyan font-medium mb-2">Joint Section Student Representative</h4>
-              <p className="text-tech-lightest-slate">IEEE Hyderabad Section</p>
-              <p>February 2024 - November 2024</p>
-              <p className="mt-3 text-sm">Representing student interests at the sectional level and coordinating inter-college activities.</p>
-            </Card>
+          <div className="grid md:grid-cols-3 gap-6">
+            {leadershipPositions.slice(0, 3).map(position => (
+              <Card key={position.id} className="tech-card">
+                <h4 className="text-tech-cyan font-medium mb-2">{position.position}</h4>
+                <p className="text-tech-lightest-slate">{position.company}</p>
+                <p>{position.period}</p>
+                <p className="mt-3 text-sm">{position.description}</p>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+            {leadershipPositions.slice(3).map(position => (
+              <Card key={position.id} className="tech-card">
+                <h4 className="text-tech-cyan font-medium mb-2">{position.position}</h4>
+                <p className="text-tech-lightest-slate">{position.company}</p>
+                <p>{position.period}</p>
+                <p className="mt-3 text-sm">{position.description}</p>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
